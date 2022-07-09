@@ -1,0 +1,31 @@
+{% extends 'app/base.html' %}
+
+{% block title %} Enter OTP {% endblock %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="GET">
+            {% csrf_token %}
+            {% if alertmessage %}
+                <div class="alert alert-danger" role="alert">
+                    <legend class="border-bottom mb-4">Press here to resend OTP:</legend>
+                    <a name="Resend" class="btn bg-danger" href="{% url 'enter_otp' subscribed_user.id %}">Resend OTP</a>.
+                </div>
+            {% endif %}
+                <div class="col-lg-4">
+                    <legend class="border-bottom mb-4">Enter OTP Here:</legend>
+                    {% if alertmessage %}
+                    <div class="alert alert-danger" role="alert">
+                        <li>{{ alertmessage }}</li>
+                    </div>
+                    {% endif %} 
+                        <fieldset class="form-group">
+                            <input class="mb-4" type="number" id="OTP" name="OTP" min="0000" max="9999">
+                        </fieldset>
+                    <div class="form-group">
+                        <button name="Subscribe" class="btn btn-outline-info" type="submit">Subscribe</button>
+                    </div>
+                </div>
+        </form>
+    </div>
+{% endblock content %}
