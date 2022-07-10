@@ -13,7 +13,7 @@
                 </div>
             {% endif %}
                 <div class="col-lg-4">
-                    <legend class="border-bottom mb-4">Enter OTP Here:</legend>
+                    <legend class="border-bottom mb-4">Enter OTP Here To Subscribe:</legend>
                     {% if alertmessage %}
                     <div class="alert alert-danger" role="alert">
                         <li>{{ alertmessage }}</li>
@@ -23,7 +23,7 @@
                             <input class="mb-4" type="number" id="OTP" name="OTP" min="0000" max="9999">
                         </fieldset>
                     <div class="form-group">
-                        <button name="Subscribe" class="btn btn-outline-info" type="submit">Subscribe</button>
+                        <button name="Subscribe" class="btn btn-outline-info" type="submit">Verify OTP</button>
                     </div>
                 </div>
         </form>

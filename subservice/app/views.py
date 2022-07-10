@@ -61,7 +61,3 @@ class EnterOTPView(TemplateView):
                     }
                 )
         return self.render_to_response(context)
-
-
-class SubscribedView(TemplateView):
-    template_name = "app/subscribed.html"
