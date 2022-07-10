@@ -18,3 +18,34 @@
 2. make sure the MySQL server is running, otherwise a new database will be created each time you run the server
 3. check for uncreated or unapplied migrations: `python3 manage.py makemigrations && python3 manage.py migrate`
 4. hit `python3 manage.py runserver` and access the application at the given port
+
+
+## Enter Phone Number Page
+
+Visit the home page link
+
+In order to get an OTP, you have to insert a valid phone number and then press the SEND OTP button.
+
+![Enter Phone Number](subservice/media/enter_a_phonenumber.png)
+
+Incase of entering an invalid phone number you will get an error
+
+![Enter A Valid Phone Number](subservice/media/enter_a_valid_number.png)
+
+
+## Verify OTP Page
+
+In order to verify an OTP, you have to insert a the OTP sent on your number and then press the Verify OTP button.
+
+![Verify OTP](subservice/media/enter_otp.png)
+
+Incase of entering a wrong OTP you will get an error, press the Resend OTP button to get the OTP again.
+
+![Resend OTP](subservice/media/resend_otp.png)
+
+
+## Subscribed Page
+
+When you enter the correct OTP succesfully, you will see the subscribed page.
+
+![Subscribed](subservice/media/subscribed.png)
