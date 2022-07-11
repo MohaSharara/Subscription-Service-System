@@ -14,6 +14,7 @@ class SubscribedUserForm(forms.ModelForm):
             }
         )
     )
+
     class Meta:
         model = SubscribedUser
         fields = "__all__"
